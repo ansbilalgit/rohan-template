@@ -26,3 +26,12 @@ setInterval(function() {
     };
 
 }, processingTime);
+
+
+// Toggle done button
+
+$(document).ready(function() {
+    $('.redo').click(function() {
+        $('.success, .error').toggle();
+    });
+});
