@@ -337,3 +337,45 @@ input:valid~label {
     top: -24px;
     color: #00dd22;
 }
+
+
+/* Loading bar */
+
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+} */
+
+#loading-bar {
+    width: 35vw;
+    height: 1.5vw;
+    /* min-height: 24px; */
+    background-color: #eaeaea;
+    border: 0.5vw solid #fff;
+    border-radius: 5vw;
+    box-shadow: 0 0 1vw rgba(0, 127, 255, 0.25);
+    overflow: hidden;
+}
+
+#loading-bar.complete {
+    transition: 0.8s ease;
+    transform: rotate(-180deg);
+}
+
+#loading-bar.complete #progress {
+    transition: 0.4s ease;
+    width: 0% !important;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(#25C42F, #25c491);
+    transition: 0.5s ease;
+}
