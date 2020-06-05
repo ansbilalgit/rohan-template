@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    margin-top: 2px;
+}
+
+.shelf {
+    /* margin-top: -21px; */
+    position: absolute;
+    /* top: 50%; */
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.app_icon {
+    margin: 0 10px;
+    display: inline-block;
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    background: transparent url(http://cdn.pokki.com/pokki/a65116cdc0b4377bed428e280c19949d56248d11/13/icon-42x42.png) no-repeat center center;
+}
+
+.app_icon.app2 {
+    background-image: url(http://cdn.pokki.com/pokki/73a90bd250997bf4e96ac280966a5f05f20838b5/14/icon-42x42.png);
+}
+
+.app_icon.app3 {
+    background-image: url(http://cdn.pokki.com/pokki/49fbc889e3d239005a66d09849b9b735e1dc2bee/9/icon-42x42.png);
+}
+
+.loader {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    -webkit-transition: opacity 200ms ease;
+    -webkit-transition-delay: 500ms;
+}
+
+.loader.done {
+    opacity: 0;
+}
+
+.loader .ring {
+    /* doesn't move */
+    margin-top: -14px;
+    margin-left: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: opacity 300ms ease;
+}
+
+.loader.done .ring {
+    opacity: 0;
+}
+
+.loader .pie {
+    margin-top: -14px;
+    margin-left: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    clip: rect(0px, 28px, 28px, 14px);
+}
+
+.loader .pie.lt50 {
+    -webkit-transform: rotate(0deg)
+}
+
+.loader .pie.gt50 {
+    opacity: 0;
+}
+
+.loader .mask {
+    margin-top: -14px;
+    margin-left: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50% 0 0 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    clip: rect(0px, 14px, 28px, 0px);
+}
+
+.loader .pie.fill {
+    -webkit-transform: rotate(180deg)
+}
