@@ -15,7 +15,7 @@ html {
 }
 
 .wizard {
-    max-width: 620px;
+    /* max-width: 620px; */
     margin: 0 auto;
 }
 
@@ -179,11 +179,11 @@ html {
 }
 
 .panel.movingOutBackward {
-    transform: translateX(-620px);
+    transform: translateX(-1080px);
 }
 
 .panel.movingOutFoward {
-    transform: translateX(620px);
+    transform: translateX(1080px);
 }
 
 .panel.movingIn {

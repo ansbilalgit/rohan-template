@@ -95,8 +95,13 @@ class Wizard {
     }
 
     updateButtonsStatus() {
-        if (this.currentStep === 0) this.previousControl.classList.add('disabled');
-        else this.previousControl.classList.remove('disabled');
+        if (this.currentStep === 0) {
+            // this.previousControl.classList.add('disabled');
+            this.previousControl.style.display = 'none'
+        } else {
+            // this.previousControl.classList.remove('disabled');
+            this.previousControl.style.display = '';
+        }
     }
 
     updtadeCurrentStep(movement) {
