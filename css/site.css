@@ -342,13 +342,13 @@ input:valid~label {
 } */
 
 #loading-bar {
-    width: 35vw;
-    height: 1.5vw;
+    width: 45vw;
+    height: 0.8vw;
     /* min-height: 24px; */
     background-color: #eaeaea;
-    border: 0.5vw solid #fff;
+    border: 0.4vw solid #fff;
     border-radius: 5vw;
-    box-shadow: 0 0 1vw rgba(0, 127, 255, 0.25);
+    box-shadow: 0 0 0.5vw rgba(0, 127, 255, 0.25);
     overflow: hidden;
 }
 
