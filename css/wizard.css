@@ -9,7 +9,7 @@ html {
 
 .wrapper {
     position: relative;
-    max-width: 1080px;
+    max-width: 85%;
     margin: 50px auto;
     z-index: 2;
 }
@@ -179,11 +179,11 @@ html {
 }
 
 .panel.movingOutBackward {
-    transform: translateX(-1080px);
+    transform: translateX(100vw);
 }
 
 .panel.movingOutFoward {
-    transform: translateX(1080px);
+    transform: translateX(100vw);
 }
 
 .panel.movingIn {

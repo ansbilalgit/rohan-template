@@ -116,17 +116,6 @@ canvas {
 
 /* USB TAB */
 
-section {
-    /* For demo purposes only */
-    padding: 100px;
-    box-sizing: border-box;
-    position: absolute;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1);
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%)
-}
-
 #reading-key {
     position: relative;
     width: 54px;
@@ -630,6 +619,7 @@ input:valid~label {
     color: #4caf50;
     border-color: #4caf50;
     outline: none;
+    padding: 8px;
 }
 
 .modalbox.success button:hover,

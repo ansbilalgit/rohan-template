@@ -9,9 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css links -->
+
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/site.css">
     <link rel="stylesheet" href="./css/wizard.css">
     <link rel="stylesheet" href="./css/battle.css">
+    <link rel="stylesheet" href="./css/cards.css">
+
 
     <script type="text/javascript" src="./js/jquery.js"></script>
 
@@ -214,6 +218,28 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Step 9 -->
+                            <div class="step">
+                                <div class="step__content">
+                                    <p class="step__number">
+                                        <svg class="icon">
+                                            <use xlink:href="#clipboard" />
+                                        </svg>
+                                    </p>
+                                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                                    </svg>
+
+                                    <div class="lines">
+                                        <div class="line -background">
+                                        </div>
+
+                                        <div class="line -progress">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
@@ -368,7 +394,46 @@
                             </textarea>
 
                     </div>
+                    <!-- Panel 9-->
+                    <div class="panel">
+                        <header class="panel__header">
+                            <h2 class="panel__title">Done</h2>
+                            <p class="panel__subheading">Congratulations you have completed all steps</p>
+                        </header>
+                        <p class="panel__content"></p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate">
+                                    <svg class="icon">
+                                        <use xlink:href="#clipboard" />
+                                   </svg>
+                                    <!--/.icon-->
+                                    <h1>Success!</h1>
+                                    <p>We've sent a confirmation to your e-mail
+                                        <br>for verification.</p>
+                                    <button type="button" class="redo btn">Ok</button>
+                                </div>
+                                <!--/.success-->
+                            </div>
+                            <!--/.row-->
+                            <div class="row">
+                                <div class="modalbox error col-sm-8 col-md-6 col-lg-5 center animate" style="display: none;">
+                                    <div class="icon">
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </div>
+                                    <!--/.icon-->
+                                    <h1>Oh no!</h1>
+                                    <p>Oops! Something went wrong,
+                                        <br> you should try again.</p>
+                                    <button type="button" class="redo btn">Try again</button>
 
+                                </div>
+                                <!--/.success-->
+                            </div>
+                            <!--/.row-->
+                        </div>
+
+                    </div>
 
 
                 </div>
@@ -379,40 +444,143 @@
                 </div>
             </div>
 
-            <!-- <h1 class="wizard__congrats-message">
-                Congratulations, you are now in a world of pain and suffering!
-            </h1> -->
-            <div class="container wizard__congrats-message">
-                <div class="row">
-                    <div class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate">
-                        <svg class="icon">
-                            <use xlink:href="#clipboard" />
-                       </svg>
-                        <!--/.icon-->
-                        <h1>Success!</h1>
-                        <p>We've sent a confirmation to your e-mail
-                            <br>for verification.</p>
-                        <button type="button" class="redo btn">Ok</button>
-                    </div>
-                    <!--/.success-->
-                </div>
-                <!--/.row-->
-                <div class="row">
-                    <div class="modalbox error col-sm-8 col-md-6 col-lg-5 center animate" style="display: none;">
-                        <div class="icon">
-                            <span class="glyphicon glyphicon-thumbs-down"></span>
-                        </div>
-                        <!--/.icon-->
-                        <h1>Oh no!</h1>
-                        <p>Oops! Something went wrong,
-                            <br> you should try again.</p>
-                        <button type="button" class="redo btn">Try again</button>
+            <div class="wizard__congrats-message">
 
+                <!-- <div class=""> -->
+                <div class="container">
+                    <div class="row">
+                        <section class="card-holder">
+                            <!-- Begin iOS -->
+                            <div class="col-md-4 col-sm-6 single-card">
+                                <div class="card-container manual-flip">
+                                    <div class="card">
+                                        <div class="front">
+                                            <div class="cover">
+                                                <img src="https://bilbo.surge.sh/codepen/download-cards/apple.png" />
+                                            </div>
+                                            <div class="branded">
+                                                <span class="fa fa-apple"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div class="main">
+                                                    <h3 class="use-for faint">Download For</h3>
+                                                    <button type="button" class="btn btn-default btn-block btn-download">iOS</button>
+                                                </div>
+                                                <div class="footer">
+                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
+                                      <i class="fa fa-mail-forward"></i> Get QR Code
+                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="back">
+                                            <div class="header">
+                                                <h3 class="use-for faint">QR Code</h3>
+                                            </div>
+                                            <div class="content">
+                                                <div id="qrIos" class="qr text-center"></div>
+                                            </div>
+                                            <div class="footer">
+                                                <button class="btn btn-flip" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                  </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End iOS -->
+                            <!-- Begin Android -->
+                            <div class="col-md-4 col-sm-6 single-card">
+                                <div class="card-container manual-flip">
+                                    <div class="card">
+                                        <div class="front">
+                                            <div class="cover">
+                                                <img src="https://bilbo.surge.sh/codepen/download-cards/android.png" />
+                                            </div>
+                                            <div class="branded">
+                                                <span class="fa fa-android"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div class="main">
+                                                    <h3 class="use-for faint">Download For</h3>
+                                                    <button type="button" class="btn btn-default btn-block btn-download">Android</button>
+                                                </div>
+                                                <div class="footer">
+                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
+                                      <i class="fa fa-mail-forward"></i> Get QR Code
+                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end front panel -->
+                                        <div class="back">
+                                            <div class="header">
+                                                <h3 class="use-for faint">QR Code</h3>
+                                            </div>
+                                            <div class="content">
+                                                <div id="qrAndroid" class="qr text-center"></div>
+                                            </div>
+                                            <div class="footer">
+                                                <button class="btn btn-flip" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                  </button>
+                                            </div>
+                                        </div>
+                                        <!-- end back panel -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Android -->
+                            <!-- Begin Web -->
+                            <div class="col-md-4 col-sm-6 single-card">
+                                <div class="card-container manual-flip">
+                                    <div class="card">
+                                        <div class="front">
+                                            <div class="cover">
+                                                <img src="https://bilbo.surge.sh/codepen/download-cards/web.png" />
+                                            </div>
+                                            <div class="branded">
+                                                <span class="fa fa-windows"></span>
+                                            </div>
+                                            <div class="content">
+                                                <div class="main">
+                                                    <h3 class="use-for faint">Download For</h3>
+                                                    <button type="button" class="btn btn-default btn-block btn-download">Windows</button>
+                                                </div>
+                                                <div class="footer">
+                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
+                                      <i class="fa fa-mail-forward"></i> Get QR Code
+                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end front panel -->
+                                        <div class="back">
+                                            <div class="header">
+                                                <h3 class="use-for faint">QR Code</h3>
+                                            </div>
+                                            <div class="content">
+                                                <div id="qrWeb" class="qr text-center"></div>
+                                            </div>
+                                            <div class="footer">
+                                                <button class="btn btn-flip" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                                    <i class="fa fa-reply"></i> Back
+                                  </button>
+                                            </div>
+                                        </div>
+                                        <!-- end back panel -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Web -->
+                        </section>
                     </div>
-                    <!--/.success-->
                 </div>
-                <!--/.row-->
             </div>
+
+
+
         </div>
     </div>
 
