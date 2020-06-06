@@ -351,6 +351,7 @@ input:valid~label {
     border-radius: 5vw;
     box-shadow: 0 0 1vw rgba(0, 127, 255, 0.25);
     overflow: hidden;
+    margin: 0 auto;
 }
 
 #loading-bar.complete {
@@ -373,7 +374,13 @@ input:valid~label {
 .textarea-scrollbar {
     margin: auto;
     height: 250px;
-    width: 500px;
+/*    width: 500px;*/
+    width: 100%;
+}
+.success_wrapper {
+    width: 350px;
+    margin: 0 auto;
+        padding-top: 30px;
 }
 
 

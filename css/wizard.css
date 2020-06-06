@@ -92,6 +92,8 @@ html {
     background: #fff;
     /* box-shadow: 0px 0px 10px #c5c5c5; */
     border-radius: 5px;
+    position: relative;
+    z-index: 2;
 }
 
 .wizard__congrats-message {
@@ -102,6 +104,8 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 .wizard.completed .wizard__content {
@@ -160,6 +164,7 @@ html {
     left: 0;
     transition: 0.5s all;
     padding: 50px;
+    width: calc(100% - 100px);
 }
 
 .panel__header {
