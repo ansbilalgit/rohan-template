@@ -119,7 +119,8 @@ canvas {
 #reading-key {
     position: relative;
     width: 54px;
-    left: 100%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 #key {
