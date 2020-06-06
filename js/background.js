@@ -1,4 +1,6 @@
-const c = document.body.appendChild(document.createElement('canvas')).getContext('2d')
+var _canvas = document.createElement('canvas');
+_canvas.classList.add('background-canvas');
+const c = document.body.appendChild(_canvas).getContext('2d')
     // c.classList.add('background-canvas');
 const { canvas } = c
 
