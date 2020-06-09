@@ -25,8 +25,15 @@ class Steps {
     }
 
     handleStepsClasses(movement) {
-        if (movement > 0) this.steps[this.currentStep - 1].classList.add('-completed');
-        else if (movement < 0) this.steps[this.currentStep].classList.remove('-completed');
+
+        if (movement > 0) {
+            this.steps[this.currentStep - 1].classList.add('-completed');
+            this.steps[this.currentStep].classList.add("-active")
+        } else if (movement < 0) {
+            this.steps[this.currentStep].classList.remove('-completed');
+            this.steps[this.currentStep + 1].classList.remove("-active")
+        } else if (this.currentStep == 0)
+            this.steps[this.currentStep].classList.add("-active");
     }
 
 }
@@ -40,6 +47,7 @@ class Panels {
         this.currentStep = 0;
         this.updatePanelsPosition(this.currentStep);
         this.updatePanelsContainerHeight();
+
     }
 
     getCurrentPanelHeight() {
@@ -138,6 +146,7 @@ class Wizard {
         previousControl.addEventListener('click', this.previousControlMoveStepMethod);
         nextControl.addEventListener('click', this.nextControlMoveStepMethod);
         this.updateButtonsStatus();
+        this.steps.handleStepsClasses(0);
     }
 
     moveStep(movement) {

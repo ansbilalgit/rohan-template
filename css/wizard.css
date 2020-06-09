@@ -86,6 +86,17 @@ html {
 .wizard__footer {
     padding: 0 50px 50px;
     border-radius: 5px;
+    position: relative;
+}
+
+.wizard__button_next {
+    position: absolute;
+    right: 50px;
+}
+
+.wizard__button_pre {
+    position: absolute;
+    right: auto;
 }
 
 .wizard__content {
@@ -244,6 +255,13 @@ html {
 .step.-completed .checkmark__check {
     animation: stroke 0.5s linear 0.4s forwards;
 }
+
+.step.-active .step__number {
+    border: 5px solid #5094de
+}
+
+
+/*  */
 
 .step.-completed .line {
     transform: scaleX(1);
