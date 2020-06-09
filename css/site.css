@@ -1015,14 +1015,14 @@ input:valid~label {
     text-align: center;
 }
 
-.main {
+.slider-main {
     font-family: Arial;
     width: 500px;
     display: block;
     margin: 0 auto;
 }
 
-.main .item {
+.slider-main .item {
     color: #3498db;
     /* font-size: 36px;
     line-height: 100px; */
