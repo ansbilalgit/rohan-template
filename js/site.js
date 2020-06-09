@@ -69,14 +69,23 @@ function rotateCard(btn) {
 
 // Slider
 
-$('#prev').on('click', function() {
-    var last = $('.logo').last().css({ opacity: '0', width: '0px' });
-    last.prependTo('.showrooms');
-    last.animate({ opacity: '1', width: '108px' });
+$('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
 });
-$('#next').on('click', function() {
-    var first = $('.logo').first();
-    first.animate({ opacity: '0', width: '0px' }, function() {
-        first.appendTo('.showrooms').css({ opacity: '1', width: '108px' });
-    });
+$('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    focusOnSelect: true
+});
+
+$('a[data-slide]').click(function(e) {
+    e.preventDefault();
+    var slideno = $(this).data('slide');
+    $('.slider-nav').slick('slickGoTo', slideno - 1);
 });

@@ -1014,3 +1014,53 @@ input:valid~label {
 .panel__content {
     text-align: center;
 }
+
+.main {
+    font-family: Arial;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+.main .item {
+    color: #3498db;
+    /* font-size: 36px;
+    line-height: 100px; */
+    margin: 10px;
+    /* padding: 2%; */
+    position: relative;
+    text-align: center;
+}
+
+.action {
+    display: block;
+    margin: 100px auto;
+    width: 100%;
+    text-align: center;
+}
+
+.action a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #f30;
+    color: #fff;
+    text-decoration: none;
+}
+
+.action a:hover {
+    background: #000;
+}
+
+.slick-next,
+.slick-prev {
+    background-color: #3498db !important;
+    padding: 5px !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 -10px;
+}
+
+.flag {
+    max-width: 100%;
+    height: 100px;
+}
