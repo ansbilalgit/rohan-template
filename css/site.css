@@ -288,6 +288,7 @@ form {
     width: 250px;
     height: 44px;
     line-height: 44px;
+    left: 40%;
 }
 
 label {
@@ -945,17 +946,17 @@ input:valid~label {
 
 
 /* Slider carousel */
+
 .thumbnail_galler_wrap {
     position: relative;
-    
 }
+
 .thumbnailgallery {
     margin-bottom: 40px;
     width: 90%;
     height: 120px;
     overflow: hidden;
     margin: 0 auto;
-    
 }
 
 .showrooms a.logo {
@@ -977,7 +978,7 @@ input:valid~label {
 
 .arrowleft,
 .arrowright {
-       font-size: 30px;
+    font-size: 30px;
     cursor: pointer;
     display: inline-block;
     padding: 10px 10px;
@@ -991,23 +992,25 @@ input:valid~label {
 
 .arrowright {
     left: auto !important;
-    right:0 !important;
+    right: 0 !important;
 }
 
-.panel__content , 
-.panel__content p ,   
-.panel__content h1 ,   
-.panel__content h2 ,   
-.panel__content h3 ,   
-.panel__content h4 ,   
-.panel__content h5 ,   
+.panel__content,
+.panel__content p,
+.panel__content h1,
+.panel__content h2,
+.panel__content h3,
+.panel__content h4,
+.panel__content h5,
 .panel__content h6 {
     text-align: center;
 }
+
 .panel__content img {
     display: block;
     margin: 0 auto;
 }
+
 .panel__content {
     text-align: center;
 }
