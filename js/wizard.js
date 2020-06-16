@@ -45,6 +45,7 @@ class Panels {
         this.panelsContainer = this.getPanelsContainer();
         this.panels = this.getPanels();
         this.currentStep = 0;
+
         this.updatePanelsPosition(this.currentStep);
         this.updatePanelsContainerHeight();
 
@@ -78,6 +79,15 @@ class Panels {
                 else if (i > currentStep) panels[i].classList.add('movingOutFoward');
             } else {
                 panels[i].classList.add('movingIn');
+
+            }
+            let modal = document.getElementById("termsModal");
+            if (currentStep == 1) {
+                //showing 
+
+                modal.style.display = "block";
+            } else {
+                modal.style.display = "none";
             }
         }
 
@@ -138,18 +148,26 @@ class Wizard {
         this.wizard.classList.add('completed');
     }
 
-    addControls(previousControl, nextControl) {
+    addControls(previousControl, nextControl, reject, accept) {
+
         this.previousControl = previousControl;
         this.nextControl = nextControl;
+        this.acceptControl = accept;
+        this.rejectControl = reject;
+
         this.previousControlMoveStepMethod = this.moveStep.bind(this, -1);
         this.nextControlMoveStepMethod = this.moveStep.bind(this, 1);
         previousControl.addEventListener('click', this.previousControlMoveStepMethod);
         nextControl.addEventListener('click', this.nextControlMoveStepMethod);
+
+        reject.addEventListener('click', this.previousControlMoveStepMethod);
+        accept.addEventListener('click', this.nextControlMoveStepMethod);
         this.updateButtonsStatus();
         this.steps.handleStepsClasses(0);
     }
 
     moveStep(movement) {
+        debugger;
         if (this.validateMovement(movement)) {
             this.updtadeCurrentStep(movement);
             this.steps.handleStepsClasses(movement);
@@ -166,8 +184,16 @@ class Wizard {
 
 }
 
-let wizardElement = document.getElementById('wizard');
-let wizard = new Wizard(wizardElement);
-let buttonNext = document.querySelector('.next');
-let buttonPrevious = document.querySelector('.previous');
-wizard.addControls(buttonPrevious, buttonNext);
+(function() {
+    let wizardElement = document.getElementById('wizard');
+    let wizard = new Wizard(wizardElement);
+    let buttonNext = document.querySelector('.next');
+    let buttonPrevious = document.querySelector('.previous');
+    let buttonAccept = document.querySelector('.accept')
+    let buttonReject = document.querySelector('.reject')
+    wizard.addControls(buttonPrevious, buttonNext, buttonReject, buttonAccept);
+    // setTimeout(function() {
+    //     alert("hello world");
+    //     wizard.updatePanelsContainerHeight()
+    // }, 3000);
+})();
