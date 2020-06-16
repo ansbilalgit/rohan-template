@@ -167,7 +167,7 @@ class Wizard {
     }
 
     moveStep(movement) {
-        debugger;
+
         if (this.validateMovement(movement)) {
             this.updtadeCurrentStep(movement);
             this.steps.handleStepsClasses(movement);

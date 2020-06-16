@@ -20,9 +20,25 @@ function updateTimer(el, status) {
     }, 15);
 }
 
-var loaders = $('.loader');
-loaders.each(function(idx, ldr) {
+function startLoading() {
+    var loaders = $('.loader');
+    $('.shelf').show();
+    loaders.each(function(idx, ldr) {
+        setTimeout(function() {
+            updateTimer(ldr, 0);
+        }, Math.floor(1000 * Math.random()));
+    });
+}
+
+$(".search_btn").on("click", function() {
+
+    var color_loader = $(".loader_color");
+    color_loader.show();
+    $(".search__button").hide();
+
     setTimeout(function() {
-        updateTimer(ldr, 0);
-    }, Math.floor(1000 * Math.random()));
-});
+
+        color_loader.hide();
+        startLoading();
+    }, 3000);
+})
