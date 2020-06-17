@@ -347,7 +347,7 @@
                         <div class="panel__content">
 
                             <div class="input-field">
-                                <input type="text" id="name" required />
+                                <input type="text" class="serial_number" id="name" required />
                                 <label for="name">Your Serial Number:</label>
                             </div>
                         </div>
@@ -457,27 +457,27 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div id="loading-bar">
-                            <div id="progress"></div>
-                        </div> -->
 
                     </div>
 
                     <!-- Panel 7-->
                     <div class="panel">
                         <header class="panel__header">
-                            <h2 class="panel__title">Setup Printer.</h2>
-                            <p class="panel__subheading">Please Setup your printer</p>
+                            <h2 class="panel__title">Download Data.</h2>
+                            <p class="panel__subheading">Download Menucard, Drinks, Offers
+                            </p>
                         </header>
-
-                        <div class="wrap">
+                        <div id="loading-bar">
+                            <div id="progress"></div>
+                        </div>
+                        <!-- <div class="wrap">
                             <div class="bg">
                                 <div class="loading">
                                     <span class="title">loading</span>
                                     <span class="text">tehran highway</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Panel 8-->
                     <div class="panel">
@@ -497,9 +497,9 @@
                                     </div>
                                     <!--/.icon-->
                                     <h1>Success!</h1>
-                                    <p>We've sent a confirmation to your e-mail
+                                    <!-- <p>We've sent a confirmation to your e-mail
                                         <br>for verification.</p>
-                                    <button type="button" class="redo btn">Ok</button>
+                                    <button type="button" class="redo btn">Ok</button> -->
                                 </div>
                                 <!--/.success-->
                             </div>
@@ -512,9 +512,9 @@
                                     </div>
                                     <!--/.icon-->
                                     <h1>Oh no!</h1>
-                                    <p>Oops! Something went wrong,
+                                    <!-- <p>Oops! Something went wrong,
                                         <br> you should try again.</p>
-                                    <button type="button" class="redo btn">Try again</button>
+                                    <button type="button" class="redo btn">Try again</button> -->
 
                                 </div>
                                 <!--/.success-->
@@ -548,36 +548,26 @@
                                     <div class="card">
                                         <div class="front">
                                             <div class="cover">
-                                                <img src="https://bilbo.surge.sh/codepen/download-cards/apple.png" />
+                                                <img src="./images/background.png" />
                                             </div>
-                                            <div class="branded">
-                                                <span class="fa fa-apple"></span>
+                                            <div class="branded image-box1">
+                                                <!-- <span class="fa fa-apple"></span> -->
+                                                <img src="./images/delivery.png">
                                             </div>
                                             <div class="content">
                                                 <div class="main">
-                                                    <h3 class="use-for faint">Download For</h3>
-                                                    <button type="button" class="btn btn-default btn-block btn-download">iOS</button>
+                                                    <button type="button" class="btn button btn-block btn-download">Delivery</button>
                                                 </div>
-                                                <div class="footer">
-                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
-                                      <i class="fa fa-mail-forward"></i> Get QR Code
-                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="header">
-                                                <h3 class="use-for faint">QR Code</h3>
-                                            </div>
-                                            <div class="content">
-                                                <div id="qrIos" class="qr text-center"></div>
+
                                             </div>
                                             <div class="footer">
-                                                <button class="btn btn-flip" onclick="rotateCard(this)">
-                                    <i class="fa fa-reply"></i> Back
-                                  </button>
+
+                                                <div class="signin">
+                                                    Sign In
+                                                </div>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -588,37 +578,25 @@
                                     <div class="card">
                                         <div class="front">
                                             <div class="cover">
-                                                <img src="https://bilbo.surge.sh/codepen/download-cards/android.png" />
+                                                <img src="./images/background.png" />
                                             </div>
-                                            <div class="branded">
-                                                <span class="fa fa-android"></span>
+                                            <div class="branded image-box2">
+                                                <!-- <span class="fa fa-apple"></span> -->
+                                                <img src="./images/reservation.png">
                                             </div>
                                             <div class="content">
                                                 <div class="main">
-                                                    <h3 class="use-for faint">Download For</h3>
-                                                    <button type="button" class="btn btn-default btn-block btn-download">Android</button>
+                                                    <button type="button" class="btn button btn-block btn-download">Reservation</button>
                                                 </div>
-                                                <div class="footer">
-                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
-                                      <i class="fa fa-mail-forward"></i> Get QR Code
-                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end front panel -->
-                                        <div class="back">
-                                            <div class="header">
-                                                <h3 class="use-for faint">QR Code</h3>
-                                            </div>
-                                            <div class="content">
-                                                <div id="qrAndroid" class="qr text-center"></div>
+
                                             </div>
                                             <div class="footer">
-                                                <button class="btn btn-flip" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-                                    <i class="fa fa-reply"></i> Back
-                                  </button>
+                                                <div class="signin">
+                                                    Sign In
+                                                </div>
                                             </div>
                                         </div>
+
                                         <!-- end back panel -->
                                     </div>
                                 </div>
@@ -630,35 +608,22 @@
                                     <div class="card">
                                         <div class="front">
                                             <div class="cover">
-                                                <img src="https://bilbo.surge.sh/codepen/download-cards/web.png" />
+                                                <img src="./images/background.png" />
                                             </div>
-                                            <div class="branded">
-                                                <span class="fa fa-windows"></span>
+                                            <div class="branded image-box3">
+                                                <!-- <span class="fa fa-apple"></span> -->
+                                                <img src="./images/dinner.png">
                                             </div>
                                             <div class="content">
                                                 <div class="main">
-                                                    <h3 class="use-for faint">Download For</h3>
-                                                    <button type="button" class="btn btn-default btn-block btn-download">Windows</button>
+                                                    <button type="button" class="btn button btn-block btn-download">Dinner</button>
                                                 </div>
-                                                <div class="footer">
-                                                    <button class="btn btn-flip btn-qr" onclick="rotateCard(this)">
-                                      <i class="fa fa-mail-forward"></i> Get QR Code
-                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- end front panel -->
-                                        <div class="back">
-                                            <div class="header">
-                                                <h3 class="use-for faint">QR Code</h3>
-                                            </div>
-                                            <div class="content">
-                                                <div id="qrWeb" class="qr text-center"></div>
+
                                             </div>
                                             <div class="footer">
-                                                <button class="btn btn-flip" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-                                    <i class="fa fa-reply"></i> Back
-                                  </button>
+                                                <div class="signin">
+                                                    Sign In
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- end back panel -->
@@ -667,6 +632,63 @@
                             </div>
                             <!-- End Web -->
                         </section>
+                    </div>
+
+                    <div class="signinsec">
+                        <div class="loginsec">
+                            <div class="loginsec-left">
+                                <div class="logosec">
+                                    <div class="logo">
+                                        <img src="images/logo.png">
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="first">
+                                        <input type="text" name="" placeholder="Email">
+                                    </div>
+                                    <div class="first">
+                                        <input type="Password" placeholder="Password" style="width: 90%;" class="passshow" id="myInput"><i class="fa fa-eye" onclick="showPassword()"></i>
+                                    </div>
+                                    <div class="remmesec">
+                                        <div class="check">
+                                            <input type="checkbox" name=""><span style="vertical-align: top;">Remember me</span>
+                                        </div>
+                                        <div class="fprgetright">Forgot Password?</div>
+                                    </div>
+                                    <div class="loginbutton">Login</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="forgetpasspopup">
+                        <div class="sendmsgsec">
+                            <div class="send">
+                                <div class="loginsec-left">
+                                    <div class="logosec">
+                                        <div class="logo">
+                                            <img src="images/logo.png">
+                                        </div>
+                                    </div>
+                                    <div class="form">
+                                        <div class="first">
+                                            <input type="text" name="" placeholder="Username or Email">
+                                        </div>
+                                        <div class="first">
+                                            <input type="text" name="" placeholder="Phone Number">
+                                        </div>
+                                        <!-- <div class="remmesec">
+                                              <div class="check">
+                                                      <input type="checkbox" name=""><span style="vertical-align: top;">Remember me</span>
+                                              </div>
+                                              <div class="fprgetright">Forgot Password?</div>
+                                      </div> -->
+                                        <div class="loginbutton sendmessage">Send</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

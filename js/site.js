@@ -1,33 +1,3 @@
-let bar = document.querySelector("#loading-bar");
-let progress = document.querySelector("#progress");
-// let reporter = document.querySelector("p > span");
-
-// let processingTime = 800;
-// let i = 0;
-// setInterval(function() {
-
-//     if (i < 99) {
-//         i = i + Math.floor(Math.random() * (25 - 1));
-//         progress.style.width = i + "%";
-//         processingTime = Math.floor(Math.random() * (3000 - 800));
-//         if (i >= 99) {
-//             i = 99;
-//             // reporter.textContent = i;
-//             bar.classList.add('complete');
-//             processingTime = 1000;
-//         }
-//         // reporter.textContent = i;
-//     } else {
-//         i = 0;
-//         // progress.style.width = i + "%";
-//         // reporter.textContent = i;
-//         bar.classList.remove('complete');
-//         processingTime = Math.floor(Math.random() * (3000 - 800));
-//     };
-
-// }, processingTime);
-
-
 // Toggle done button
 
 $(document).ready(function() {
@@ -40,20 +10,14 @@ $(document).ready(function() {
 // Cards
 
 $(document).ready(function() {
-    $('#qrIos').qrcode({
-        width: 200,
-        height: 200,
-        text: "iOS_URL_HERE"
+    $(".signin").click(function() {
+        $(".card-holder").hide(200);
+        $(".signinsec").show(200);
     });
-    $('#qrAndroid').qrcode({
-        width: 200,
-        height: 200,
-        text: "DROID_URL_HERE"
-    });
-    $('#qrWeb').qrcode({
-        width: 200,
-        height: 200,
-        text: "WINDOWS_URL_HERE"
+
+    $(".fprgetright").click(function() {
+        $(".signinsec").hide(200);
+        $(".forgetpasspopup").show(200);
     });
 });
 
@@ -99,3 +63,31 @@ $('.slick-slider').on('click', '.slick-slide', function(e) {
     $("img", this).addClass("selected_flag")
     $(".flag_icon", this).show();
 });
+
+
+function showPassword() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+function myFunction1() {
+    var x = document.getElementById("mypass");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+function myFunction2() {
+    var x = document.getElementById("myconfirmpass");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
