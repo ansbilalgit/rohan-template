@@ -20,9 +20,10 @@ function updateTimer(el, status) {
     }, 15);
 }
 
-function startLoading() {
-    var loaders = $('.loader');
-    $('.shelf').show();
+function startLoading(loader, shelf) {
+    debugger;
+    var loaders = $(loader);
+    $(shelf).show();
     loaders.each(function(idx, ldr) {
         setTimeout(function() {
             updateTimer(ldr, 0);
@@ -30,15 +31,28 @@ function startLoading() {
     });
 }
 
-$(".search_btn").on("click", function() {
+$(".search_btn_printer").on("click", function() {
 
-    var color_loader = $(".loader_color");
+    var color_loader = $(".color_loader_printer");
     color_loader.show();
-    $(".search__button").hide();
+    $(this).hide();
 
     setTimeout(function() {
 
         color_loader.hide();
-        startLoading();
+        startLoading(".loader_printer", ".shelf_printer");
+    }, 3000);
+})
+
+$(".search_btn_pda").on("click", function() {
+
+    var color_loader = $(".color_loader_pda");
+    color_loader.show();
+    $(this).hide();
+
+    setTimeout(function() {
+
+        color_loader.hide();
+        startLoading(".loader_pda", ".shelf_pda");
     }, 3000);
 })
