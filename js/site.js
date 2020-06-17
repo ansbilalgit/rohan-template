@@ -89,3 +89,13 @@ $('a[data-slide]').click(function(e) {
     var slideno = $(this).data('slide');
     $('.slider-nav').slick('slickGoTo', slideno - 1);
 });
+
+// Handling slider click event
+
+$('.slick-slider').on('click', '.slick-slide', function(e) {
+
+    $(".flag_icon").hide();
+    $(".flag").removeClass("selected_flag");
+    $("img", this).addClass("selected_flag")
+    $(".flag_icon", this).show();
+});
